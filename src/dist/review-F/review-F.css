@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Kanit", sans-serif;
+  font-size: 2.4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+button,
+input {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: inherit;
+  letter-spacing: 1px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+:root {
+  --main-orange: #f7961b;
+  --main-blue: #2a388f;
+  --main-gray: #f7f7f9;
+  --light-gray: #e7e7ec;
+  --rich-gray: #888888;
+  --white: white;
+  --black: black;
+}
+
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  padding: 15px 3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 9px 0px;
+}
+.header__icon i {
+  color: var(--main-blue);
+  font-size: 30px;
+}
+
+.main {
+  position: relative;
+  height: 100vh;
+  margin: 0 8% 0;
+  padding-top: 120px;
+}
+.main__title {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  column-gap: 50px;
+}
+.main__title .title__name {
+  letter-spacing: 1px;
+}
+.main__title .title__name--big {
+  font-size: 40px;
+}
+.main__title .title__name--small {
+  font-size: 30px;
+  display: inline-block;
+  padding: 5px 10px;
+  color: white;
+  background-color: #2a388f;
+  border-radius: 10px;
+  font-weight: 500;
+}
+.main__card {
+  padding-top: 50px;
+  margin: 0 auto;
+  width: 70%;
+  height: 70%;
+}
+.main__card .card__inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+.main__card .card__inner.is-flipped {
+  transform: rotateY(180deg);
+}
+.main__card .card__face {
+  padding: 30px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-gray);
+}
+.main__card .card__face h2 {
+  font-size: 3.5rem;
+}
+.main__card .card__face--back {
+  transform: rotateY(180deg);
+}
+.main__card .card__btn {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+}
+.main__card .card__btn i {
+  font-size: 4.5rem;
+}
+.main__card .card__btn i.green {
+  color: green;
+}
+.main__btn {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+.main__btn .btn__inner {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+.main__btn .btn__inner i {
+  color: #2a388f;
+  font-size: 45px;
+}
+
+/*# sourceMappingURL=review-F.css.map */

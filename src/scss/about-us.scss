@@ -1,0 +1,222 @@
+// Global css
+@use "./Global/UI";
+// About-us css
+// header
+.header {
+    padding: 1.5rem 3%;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 9px 0px;
+    &__H-A {
+        min-width: 11rem;
+        text-align: center;
+        margin-left: 4%;
+        a {
+            font-size: 2.4rem;
+            color: black;
+        }
+    }
+    &__search {
+        width: 40%;
+        position: relative;
+        margin-left: 4%;
+        i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 1rem;
+        }
+        input {
+            width: 100%;
+            font-size: 2rem;
+            background-color: var(--light-gray);
+            border-radius: 1rem;
+            border: none;
+            outline: none;
+            padding: 5px 0 5px 40px;
+            &::placeholder {
+                color: var(--rich-gray);
+            }
+        }
+    }
+    &__account {
+        position: relative;
+        margin-left: 10%;
+        #account {
+            opacity: 0;
+            visibility: hidden;
+        }
+        #account:checked + .account__list {
+            opacity: 1;
+            visibility: visible;
+        }
+        i {
+            cursor: pointer;
+            font-size: 5rem;
+            color: var(--main-blue);
+        }
+        .account__list {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 120%;
+            min-width: 13rem;
+            padding: 5px;
+            border: 2px solid var(--light-gray);
+            background-color: white;
+            border-radius: 10px;
+            a {
+                display: grid;
+                grid-template-columns: 2.5rem auto;
+                gap: 1rem;
+                line-height: 4rem;
+                i {
+                    justify-self: center;
+                    align-self: center;
+                    font-size: 2rem;
+                    color: var(--rich-gray);
+                }
+                span {
+                    font-size: 1.6rem;
+                    color: var(--black);
+                }
+                &:hover {
+                    background-color: var(--main-gray);
+                }
+            }
+        }
+    }
+}
+// main
+.main {
+    // Section about
+    .about {
+        padding: 8rem 16%;
+        &__heading {
+            letter-spacing: 1px;
+            text-align: center;
+            font-size: 6rem;
+            font-weight: 500;
+            line-height: 5.6rem;
+        }
+        &__container {
+            display: grid;
+            grid-template-columns: 3.4fr 6.6fr;
+            column-gap: 5rem;
+            margin-top: 10rem;
+        }
+        &__btn {
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: 2rem 4rem;
+            background-color: var(--main-blue);
+            color: var(--white);
+            font-size: 1.6rem;
+            border-radius: 8px;
+            box-shadow: rgba(56, 56, 56, 0.21) 7px 7px 10px 0px;
+        }
+    }
+    &__title {
+        letter-spacing: 1px;
+        font-size: 3.2rem;
+        margin-bottom: 4.8rem;
+    }
+    &__desc {
+        font-size: 2rem;
+        letter-spacing: 1px;
+        font-weight: 200;
+        line-height: 3rem;
+        margin-bottom: 3.8rem;
+    }
+    &__image {
+        img {
+            border-radius: 1.6rem;
+        }
+    }
+    // Section story
+    .story {
+        padding: 8rem 16%;
+        display: grid;
+        grid-template-columns: 6.2fr 3.8fr;
+        .desc-size {
+            padding-right: 5rem;
+        }
+    }
+    // Section feature
+    .feature {
+        background-color: var(--main-gray);
+        padding: 5rem 9%;
+        display: grid;
+        grid-template-columns: 42% 54%;
+        gap: 4%;
+        &__title {
+            color: var(--main-blue);
+            font-size: 4rem;
+            margin-bottom: 3rem;
+        }
+        &__desc {
+            font-size: 2.5rem;
+            font-weight: 200;
+            line-height: 3.5rem;
+            margin-bottom: 5rem;
+        }
+        &__btn {
+            box-shadow: rgba(56, 56, 56, 0.21) 7px 7px 10px 0px;
+            display: inline-block;
+            background-color: var(--main-orange);
+            color: white;
+            padding: 1rem;
+            border-radius: 1rem;
+            font-size: 2.4rem;
+        }
+        // feature box
+        &__box {
+            display: grid;
+            gap: 1rem 1rem;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+        &__item {
+            padding: 2rem;
+            background-color: var(--white);
+            border-radius: 1.6rem;
+            box-shadow: rgba(56, 56, 56, 0.21) 7px 7px 10px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .item__title {
+                font-size: 2.6rem;
+            }
+        }
+    }
+}
+// Footer
+.footer {
+    background-color: var(--main-blue);
+    color: var(--main-orange);
+    padding: 3rem 0 3rem;
+    display: flex;
+    justify-content: space-around;
+    &__logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__icons {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        font-size: 3rem;
+    }
+    &__list {
+        margin-top: 5px;
+        a {
+            font-size: 1.6rem;
+            line-height: 3rem;
+            color: var(--white);
+            font-weight: lighter;
+        }
+    }
+}

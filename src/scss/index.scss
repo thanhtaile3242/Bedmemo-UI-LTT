@@ -1,0 +1,296 @@
+// Global css
+@use "./Global/UI";
+// Home css
+// header
+.header {
+    padding: 15px 3%;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 9px 0px;
+    &__H-A {
+        min-width: 110px;
+        text-align: center;
+        margin-left: 4%;
+        a {
+            font-size: 2.4rem;
+            color: var(--black);
+        }
+    }
+    &__search {
+        width: 40%;
+        position: relative;
+        margin-left: 4%;
+        i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10px;
+        }
+        input {
+            width: 100%;
+            font-size: 20px;
+            background-color: var(--light-gray);
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            padding: 5px 0 5px 40px;
+            &::placeholder {
+                color: var(--rich-gray);
+            }
+        }
+    }
+    &__account {
+        position: relative;
+        margin-left: 10%;
+        #account {
+            opacity: 0;
+            visibility: hidden;
+        }
+        #account:checked + .account__list {
+            opacity: 1;
+            visibility: visible;
+        }
+        i {
+            cursor: pointer;
+            font-size: 5rem;
+            color: var(--main-blue);
+        }
+        .account__list {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 120%;
+            min-width: 130px;
+            padding: 5px;
+            border: 2px solid var(--light-gray);
+            background-color: var(--white);
+            border-radius: 10px;
+            a {
+                display: grid;
+                grid-template-columns: 25px auto;
+                gap: 10px;
+                line-height: 40px;
+                i {
+                    justify-self: center;
+                    align-self: center;
+                    font-size: 20px;
+                    color: var(--rich-gray);
+                }
+                span {
+                    font-size: 18px;
+                    color: black;
+                }
+                &:hover {
+                    background-color: var(--main-gray);
+                }
+            }
+        }
+    }
+}
+// main
+.main {
+    padding: 20px 10%;
+    // Section welcome
+    &__welcome {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .content {
+            padding: 10% 0 0 15px;
+            &__title {
+                font-size: 6rem;
+            }
+            &__sub {
+                color: var(--main-orange);
+                font-size: 2.4rem;
+            }
+            &__desc {
+                color: var(--rich-gray);
+                font-size: 2rem;
+                margin-top: 30px;
+                letter-spacing: 1px;
+                font-weight: 200;
+            }
+            &__btn {
+                display: inline-block;
+                padding: 15px 30px;
+                font-size: 2rem;
+                background-color: var(--main-blue);
+                color: var(--white);
+                margin-top: 50px;
+                border-radius: 10px;
+            }
+        }
+    }
+    // Section services
+    &__services {
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .content {
+            padding: 0 48px 0 12px;
+            &__title {
+                margin: 35px 0 30px;
+                font-size: 5.5rem;
+            }
+            &__desc {
+                font-size: 1.8rem;
+                font-weight: 400;
+                letter-spacing: 1px;
+                color: var(--rich-gray);
+            }
+        }
+        //
+        .box {
+            padding: 0 12px 0 24px;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            row-gap: 20px;
+            &__item {
+                padding: 40px;
+                display: grid;
+                grid-template-columns: 23% auto;
+                grid-gap: 50px;
+                background-color: var(--main-gray);
+                border-radius: 10px;
+            }
+            &__icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                i {
+                    font-size: 8rem;
+                }
+            }
+            &__content {
+                .box__title {
+                    font-size: 3.2rem;
+                }
+                .box__desc {
+                    letter-spacing: 1px;
+                    font-size: 1.6rem;
+                    margin-top: 10px;
+                    font-weight: 400;
+                    color: var(--rich-gray);
+                }
+            }
+            .i--blue {
+                color: var(--main-blue);
+            }
+            .i--orange {
+                color: var(--main-orange);
+            }
+        }
+    }
+    // Section feedbacks
+    &__feedbacks {
+        margin-top: 80px;
+        .slideshow {
+            position: relative;
+            .slides {
+                width: 100%;
+                display: none;
+                border-radius: 10px;
+            }
+            .truoc,
+            .sau {
+                position: absolute;
+                top: 50%;
+                transform: translate(0%, -50%);
+                padding: 16px;
+                color: black;
+                font-size: 25px;
+            }
+            .sau {
+                right: 0;
+            }
+            .truoc:hover,
+            .sau:hover {
+                background-color: var(--main-orange);
+                opacity: 0.8;
+            }
+            .fade {
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+
+            @keyframes fade {
+                from {
+                    opacity: 0.4;
+                }
+
+                to {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    // Section join
+    &__join {
+        margin-top: 80px;
+        border-radius: 16px;
+        background-image: url(../../../Images/home/home-2.jpg);
+        background-position: center;
+        background-size: cover;
+        .join__container {
+            padding: 8% 10% 5%;
+            .join__title {
+                text-align: center;
+                font-size: 6rem;
+                color: var(--white);
+            }
+            .join__btn {
+                margin-top: 30px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 40px;
+                .btn__a {
+                    text-align: center;
+                    min-width: 23%;
+                    font-size: 18px;
+                    display: inline-block;
+                    color: var(--white);
+                    padding: 25px;
+                    border-radius: 10px;
+                    letter-spacing: 1px;
+                    &--orange {
+                        background-color: var(--main-orange);
+                        justify-self: end;
+                    }
+                    &--blue {
+                        background-color: var(--main-blue);
+                        justify-self: start;
+                    }
+                }
+            }
+        }
+    }
+}
+// footer
+.footer {
+    background-color: var(--main-blue);
+    color: var(--main-orange);
+    padding: 30px 0 30px;
+    display: flex;
+    justify-content: space-around;
+    &__logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__icons {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        font-size: 3rem;
+    }
+    &__list {
+        margin-top: 5px;
+        a {
+            font-size: 1.6rem;
+            line-height: 3rem;
+            color: var(--white);
+            font-weight: lighter;
+        }
+    }
+}

@@ -1,0 +1,166 @@
+// Global css
+@use "./Global/UI";
+// Create-Q css
+// header (create-F and create-Q)
+.header {
+    padding: 15px 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 9px 0px;
+    &__icon {
+        i {
+            color: var(--main-blue);
+            font-size: 30px;
+        }
+    }
+}
+// main
+.main {
+    padding: 35px 4%;
+    background-color: var(--main-gray);
+    display: grid;
+    grid-template-columns: 30% 68%;
+    gap: 2%;
+    // Left
+    &__left {
+        padding: 70px 0 0 20px;
+        .left__info {
+            margin-bottom: 30px;
+            .text-input {
+                border: 0;
+                font-size: 25px;
+                background-color: var(--main-gray);
+                width: 100%;
+                border-bottom: 2px solid var(--black);
+                letter-spacing: 1px;
+            }
+            ::placeholder {
+                font-weight: 200;
+                letter-spacing: 1px;
+            }
+            .text-name {
+                font-size: 20px;
+                margin-top: 5px;
+            }
+        }
+        .left__btn {
+            text-align: center;
+            button {
+                display: inline-block;
+                background-color: var(--main-blue);
+                color: white;
+                padding: 5px 10px;
+                font-size: 25px;
+                border-radius: 10px;
+            }
+        }
+    }
+    // Right
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        // Form-Q
+        .form-Q {
+            margin-bottom: 35px;
+            &__number {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 40px;
+                background-color: var(--white);
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                margin-bottom: 3px;
+                span {
+                    font-size: 30px;
+                    font-weight: 700;
+                }
+                i {
+                    color: var(--black);
+                }
+            }
+            //question
+            &__question {
+                margin-bottom: 20px;
+                textarea {
+                    width: 100%;
+                    height: 100%;
+                    font-size: 25px;
+                    padding: 35px;
+                    text-align: center;
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+            }
+            // answer
+            &__answers {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                gap: 15px;
+                .answers__item {
+                    padding: 10px;
+                    background-color: var(--white);
+                    border-radius: 10px;
+                    display: flex;
+                    //
+                    .choice--blue {
+                        background-color: var(--main-blue);
+                    }
+                    .choice--orange {
+                        background-color: var(--main-orange);
+                    }
+                    //
+                    .item__choice {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 5px;
+                        width: 50px;
+                        span {
+                            font-size: 30px;
+                            color: var(--white);
+                            font-weight: 700;
+                        }
+                    }
+                    //
+                    .item__content {
+                        width: 100%;
+                        position: relative;
+                        textarea {
+                            height: 100%;
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 80%;
+                            font-size: 16px;
+                            padding: 5px 5px 5px 25px;
+                        }
+                        ::placeholder {
+                            font-weight: 200;
+                            letter-spacing: 1px;
+                        }
+                        input[type="radio"] {
+                            position: absolute;
+                            right: 1%;
+                            transform: scale(2);
+                            accent-color: green;
+                        }
+                    }
+                }
+            }
+        }
+        // Add button
+        .right__btn {
+            text-align: center;
+            button {
+                display: inline-block;
+                letter-spacing: 1px;
+                color: var(--black);
+                border-bottom: 5px solid var(--main-orange);
+            }
+        }
+    }
+}

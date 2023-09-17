@@ -1,0 +1,151 @@
+// Global
+@use "./Global/UI";
+// Log-in css
+// main
+.main {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .left-side {
+        background-image: url(../../../Images/log-sign/log-sign-1.svg);
+        background-position: center;
+        background-size: cover;
+    }
+    .right-side {
+        padding: 20px 14%;
+        .log-sign {
+            display: flex;
+            &__title {
+                margin: 0 32px 0 0;
+                a {
+                    color: var(--black);
+                    min-width: 110px;
+                    font-size: 30px;
+                }
+                .cross {
+                    width: 100%;
+                    height: 5px;
+                    background-color: var(--main-orange);
+                }
+            }
+            &__back {
+                color: var(--main-blue);
+                margin-left: 56%;
+            }
+        }
+        //
+        .social-log-in {
+            margin-top: 60px;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 15px;
+            text-align: center;
+            .social__link {
+                color: var(--rich-gray);
+                border: 1px solid var(--light-gray);
+                border-radius: 10px;
+                padding: 20px;
+                display: inline-block;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                column-gap: 10px;
+                i {
+                    font-size: 40px;
+                    margin-right: 10px;
+                }
+                span {
+                    font-size: 20px;
+                    letter-spacing: 1px;
+                    font-weight: 400;
+                }
+            }
+        }
+        //
+        .cross-email {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: 4fr 2fr 4fr;
+            .cross-line-1 {
+                width: 100%;
+                height: 2px;
+                background-color: var(--main-blue);
+                align-self: center;
+            }
+            .or-email {
+                text-align: center;
+                span {
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: #586380;
+                }
+            }
+        }
+        //
+        .form-log-in {
+            margin-top: 40px;
+            .log-in__input {
+                border: none;
+                outline: none;
+                padding-bottom: 8px;
+                width: 100%;
+                font-size: 20px;
+                font-weight: 400;
+            }
+            //
+            ::placeholder {
+                color: var(--light-gray);
+            }
+            //
+            .cross-line-2 {
+                height: 2px;
+                background-color: var(--black);
+            }
+            //
+            .pass-forgot {
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
+                a {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: var(--main-orange);
+                }
+            }
+            .log-in__text {
+                font-weight: 600;
+                font-size: 14px;
+                color: var(--rich-gray);
+            }
+            //
+            #form__terms {
+                margin: 30px 0;
+                text-align: center;
+                span {
+                    font-size: 14px;
+                    color: rgb(88, 99, 128);
+                }
+                a {
+                    font-size: 16px;
+                    text-decoration: none;
+                    font-weight: bolder;
+                    color: var(--main-orange);
+                }
+            }
+            //
+            .form__btn {
+                input {
+                    border: none;
+                    width: 100%;
+                    padding: 20px 0;
+                    cursor: pointer;
+                    background-color: var(--main-blue);
+                    color: var(--white);
+                    font-size: 20px;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}

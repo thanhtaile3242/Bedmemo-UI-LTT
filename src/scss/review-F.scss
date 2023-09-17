@@ -1,0 +1,112 @@
+// Global css
+@use "./Global/UI";
+// Review-F css
+// header (create/review-F and create/review-Q)
+.header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding: 15px 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 9px 0px;
+    &__icon {
+        i {
+            color: var(--main-blue);
+            font-size: 30px;
+        }
+    }
+}
+// main
+.main {
+    position: relative;
+    height: 100vh;
+    margin: 0 8% 0;
+    padding-top: 120px;
+    &__title {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        column-gap: 50px;
+        .title__name {
+            letter-spacing: 1px;
+            &--big {
+                font-size: 40px;
+            }
+            &--small {
+                font-size: 30px;
+                display: inline-block;
+                padding: 5px 10px;
+                color: var(--white);
+                background-color: var(--main-blue);
+                border-radius: 10px;
+                font-weight: 500;
+            }
+        }
+    }
+    &__card {
+        padding-top: 50px;
+        margin: 0 auto;
+        width: 70%;
+        height: 70%;
+        .card__inner {
+            width: 100%;
+            height: 100%;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+            position: relative;
+            &.is-flipped {
+                transform: rotateY(180deg);
+            }
+        }
+        .card__face {
+            padding: 30px;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            overflow: hidden;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--main-gray);
+            h2 {
+                font-size: 3.5rem;
+            }
+            &--back {
+                transform: rotateY(180deg);
+            }
+        }
+        .card__btn {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            z-index: 2;
+            transform: translate(-50%, -50%);
+            i {
+                font-size: 4.5rem;
+                &.green {
+                    color: green;
+                }
+            }
+        }
+    }
+    &__btn {
+        margin-top: 80px;
+        display: flex;
+        justify-content: center;
+        .btn__inner {
+            width: 10%;
+            display: flex;
+            justify-content: space-between;
+            i {
+                color: var(--main-blue);
+                font-size: 45px;
+            }
+        }
+    }
+}

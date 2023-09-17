@@ -1,0 +1,122 @@
+// Global css
+@use "./Global/UI";
+// Create-F css
+// header (create/review-F and create/review-Q)
+.header {
+    padding: 15px 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 9px 0px;
+    &__icon {
+        i {
+            color: var(--main-blue);
+            font-size: 30px;
+        }
+    }
+}
+// main
+.main {
+    padding: 20px 4%;
+    background-color: var(--main-gray);
+    display: grid;
+    grid-template-columns: 30% 68%;
+    gap: 2%;
+    //
+    ::placeholder {
+        color: #929bb4;
+        font-weight: 200;
+    }
+    // Left
+    &__left {
+        padding: 40px 0 0 20px;
+        .left__info {
+            margin-bottom: 30px;
+            .text-input {
+                font-size: 25px;
+                background-color: var(--main-gray);
+                width: 100%;
+                border-bottom: 2px solid var(--black);
+            }
+            .text-name {
+                font-size: 20px;
+                margin-top: 5px;
+            }
+        }
+        .left__btn {
+            text-align: center;
+            button {
+                display: inline-block;
+                background-color: var(--main-blue);
+                color: var(--white);
+                padding: 5px 10px;
+                font-size: 25px;
+                border-radius: 10px;
+            }
+        }
+    }
+    // Right
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        // Form-F
+        .form-F {
+            margin-bottom: 35px;
+            // Card number
+            &__number {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 40px;
+                background-color: var(--white);
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                margin-bottom: 5px;
+                span {
+                    font-weight: 700;
+                    font-size: 30px;
+                }
+                i {
+                    color: var(--black);
+                }
+            }
+            // Card content
+            &__content {
+                background-color: var(--white);
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                .content__item {
+                    padding: 25px 30px 25px 20px;
+                    .content-input {
+                        width: 80%;
+                    }
+                    .cross-line {
+                        height: 2.2px;
+                        background-color: var(--black);
+                        border-top-left-radius: 8px;
+                        border-top-right-radius: 8px;
+                    }
+                    .content-text {
+                        display: inline-block;
+                        margin-top: 18px;
+                        font-size: 16px;
+                        color: var(--rich-gray);
+                    }
+                }
+            }
+        }
+        // Add button
+        .right__btn {
+            text-align: center;
+            button {
+                display: inline-block;
+                letter-spacing: 1px;
+                color: var(--black);
+                border-bottom: 5px solid var(--main-orange);
+            }
+        }
+    }
+}
